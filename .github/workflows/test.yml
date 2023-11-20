@@ -10,7 +10,7 @@ on:
       - '*'
 
 jobs:
-  goreleaser:
+  test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -31,3 +31,11 @@ jobs:
         run: |
           make tidy
           make test
+      -
+        name: Check if working tree is dirty
+        run: |
+          if [[ $(git diff --stat) != '' ]]; then
+            git diff
+            echo 'run make test and commit changes'
+            exit 1
+          fi
