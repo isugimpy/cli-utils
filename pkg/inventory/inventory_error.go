@@ -8,8 +8,8 @@ package inventory
 import (
 	"fmt"
 
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 const noInventoryErrorStr = `Package uninitialized. Please run "init" command.

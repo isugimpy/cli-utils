@@ -7,14 +7,14 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	pe "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/graph"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/validation/field"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	pe "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/graph"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
 )
 
 var (

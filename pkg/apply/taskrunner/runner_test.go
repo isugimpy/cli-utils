@@ -10,15 +10,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/cache"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	pollevent "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/watcher"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/apply/cache"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	pollevent "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/watcher"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 var (

@@ -8,17 +8,17 @@ import (
 	"strings"
 	"testing"
 
+	fakecr "github.com/fluxcd/cli-utils/pkg/kstatus/polling/clusterreader/fake"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/statusreaders/fake"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	fakemapper "github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	fakecr "sigs.k8s.io/cli-utils/pkg/kstatus/polling/clusterreader/fake"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/statusreaders/fake"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	fakemapper "sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 var (

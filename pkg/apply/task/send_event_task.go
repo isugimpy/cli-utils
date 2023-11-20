@@ -4,8 +4,8 @@
 package task
 
 import (
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/apply/taskrunner"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/apply/taskrunner"
 )
 
 // SendEventTask is an implementation of the Task interface

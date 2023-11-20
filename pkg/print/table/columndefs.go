@@ -8,9 +8,9 @@ import (
 	"io"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/print/common"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/utils/integer"
-	"sigs.k8s.io/cli-utils/pkg/print/common"
 )
 
 // ColumnDef is an implementation of the ColumnDefinition interface.

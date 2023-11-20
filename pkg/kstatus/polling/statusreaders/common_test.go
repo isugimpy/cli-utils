@@ -9,17 +9,17 @@ import (
 	"sort"
 	"testing"
 
+	fakecr "github.com/fluxcd/cli-utils/pkg/kstatus/polling/clusterreader/fake"
+	fakesr "github.com/fluxcd/cli-utils/pkg/kstatus/polling/statusreaders/fake"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	fakemapper "github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	fakecr "sigs.k8s.io/cli-utils/pkg/kstatus/polling/clusterreader/fake"
-	fakesr "sigs.k8s.io/cli-utils/pkg/kstatus/polling/statusreaders/fake"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	fakemapper "sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 var (

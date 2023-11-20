@@ -5,4 +5,4 @@
 // cli-utils.kubernetes.io API group.
 // +k8s:deepcopy-gen=package
 // +groupName=cli-utils.kubernetes.io
-package actuation // import "sigs.k8s.io/cli-utils/pkg/apis/actuation"
+package actuation // import "github.com/fluxcd/cli-utils/pkg/apis/actuation"

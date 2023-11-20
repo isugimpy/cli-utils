@@ -5,18 +5,17 @@ package flowcontrol
 
 import (
 	"bytes"
+	"context"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
 
-	"context"
-
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	flowcontrolapi "k8s.io/api/flowcontrol/v1beta2"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 func TestIsEnabled(t *testing.T) {

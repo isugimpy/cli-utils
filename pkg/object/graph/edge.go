@@ -6,7 +6,7 @@ package graph
 import (
 	"sort"
 
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // Edge encapsulates a pair of vertices describing a

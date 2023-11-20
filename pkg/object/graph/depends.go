@@ -9,14 +9,14 @@ package graph
 import (
 	"sort"
 
+	"github.com/fluxcd/cli-utils/pkg/multierror"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/dependson"
+	"github.com/fluxcd/cli-utils/pkg/object/mutation"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
+	"github.com/fluxcd/cli-utils/pkg/ordering"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/multierror"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/dependson"
-	"sigs.k8s.io/cli-utils/pkg/object/mutation"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
-	"sigs.k8s.io/cli-utils/pkg/ordering"
 )
 
 // DependencyGraph returns a new graph, populated with the supplied objects as

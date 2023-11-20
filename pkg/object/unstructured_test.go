@@ -12,8 +12,9 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	cmdtesting "k8s.io/kubectl/pkg/cmd/testing"
-	. "sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
+
+	. "github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 )
 
 var rbac = `

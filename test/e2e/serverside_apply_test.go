@@ -7,15 +7,15 @@ import (
 	"context"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/apply"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/test/e2e/e2eutil"
+	"github.com/fluxcd/cli-utils/test/e2e/invconfig"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/apply"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/test/e2e/e2eutil"
-	"sigs.k8s.io/cli-utils/test/e2e/invconfig"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

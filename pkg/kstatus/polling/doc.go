@@ -18,7 +18,7 @@
 // and pass in the list of ResourceIdentifiers to the Poll function.
 //
 //	import (
-//	  "sigs.k8s.io/cli-utils/pkg/kstatus/polling"
+//	  "github.com/fluxcd/cli-utils/pkg/kstatus/polling"
 //	)
 //
 //	identifiers := []prune.ObjMetadata{

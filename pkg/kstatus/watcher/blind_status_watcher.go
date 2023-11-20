@@ -6,8 +6,8 @@ package watcher
 import (
 	"context"
 
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // BlindStatusWatcher sees nothing.

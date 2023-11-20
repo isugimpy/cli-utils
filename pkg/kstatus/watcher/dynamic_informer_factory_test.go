@@ -9,6 +9,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -22,7 +23,6 @@ import (
 	clienttesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 func TestResourceNotFoundError(t *testing.T) {

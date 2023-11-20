@@ -8,12 +8,12 @@ import (
 	"io"
 	"time"
 
+	"github.com/fluxcd/cli-utils/cmd/status/printers/printer"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/collector"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/print/table"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/cmd/status/printers/printer"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/collector"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/print/table"
 )
 
 const (

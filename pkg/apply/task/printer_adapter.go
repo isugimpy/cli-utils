@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/cli-runtime/pkg/printers"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // KubectlPrinterAdapter is a workaround for capturing progress from

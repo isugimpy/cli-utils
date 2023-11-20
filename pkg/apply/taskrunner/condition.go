@@ -4,8 +4,8 @@
 package taskrunner
 
 import (
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // Condition is a type that defines the types of conditions

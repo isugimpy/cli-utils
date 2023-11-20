@@ -15,13 +15,13 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/client-go/dynamic"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // The default inventory name stored in the inventory template.

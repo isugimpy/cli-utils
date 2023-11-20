@@ -8,15 +8,15 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/clusterreader"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/engine"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/statusreaders"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/api/meta"
 	cmdutil "k8s.io/kubectl/pkg/cmd/util"
 	"k8s.io/kubectl/pkg/scheme"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/clusterreader"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/engine"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/statusreaders"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

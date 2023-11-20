@@ -13,7 +13,7 @@ import (
 
 // TestMain executes the tests for this package, with optional logging.
 // To see all logs, use:
-// go test sigs.k8s.io/cli-utils/pkg/kstatus/watcher -v -args -v=5
+// go test github.com/fluxcd/cli-utils/pkg/kstatus/watcher -v -args -v=5
 func TestMain(m *testing.M) {
 	// increase from 4000 to handle long event lists
 	format.MaxLength = 10000

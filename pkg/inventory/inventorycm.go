@@ -13,6 +13,9 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -20,9 +23,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 var ConfigMapGVK = schema.GroupVersionKind{

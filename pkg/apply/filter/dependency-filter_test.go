@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
+	"github.com/fluxcd/cli-utils/pkg/apply/taskrunner"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
-	"sigs.k8s.io/cli-utils/pkg/apply/taskrunner"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 var idInvalid = object.ObjMetadata{

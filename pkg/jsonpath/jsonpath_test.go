@@ -6,9 +6,9 @@ package jsonpath
 import (
 	"testing"
 
+	ktestutil "github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	ktestutil "sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
 	"sigs.k8s.io/yaml"
 )
 

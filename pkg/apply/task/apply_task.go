@@ -22,14 +22,14 @@ import (
 	"k8s.io/kubectl/pkg/cmd/apply"
 	cmddelete "k8s.io/kubectl/pkg/cmd/delete"
 
-	applyerror "sigs.k8s.io/cli-utils/pkg/apply/error"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/apply/filter"
-	"sigs.k8s.io/cli-utils/pkg/apply/info"
-	"sigs.k8s.io/cli-utils/pkg/apply/mutator"
-	"sigs.k8s.io/cli-utils/pkg/apply/taskrunner"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	applyerror "github.com/fluxcd/cli-utils/pkg/apply/error"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/apply/filter"
+	"github.com/fluxcd/cli-utils/pkg/apply/info"
+	"github.com/fluxcd/cli-utils/pkg/apply/mutator"
+	"github.com/fluxcd/cli-utils/pkg/apply/taskrunner"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // applyOptions defines the two key functions on the ApplyOptions

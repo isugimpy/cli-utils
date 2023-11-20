@@ -6,9 +6,9 @@ package graph
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 var (

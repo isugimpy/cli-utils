@@ -9,6 +9,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/engine"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metainternalversion "k8s.io/apimachinery/pkg/apis/meta/internalversion"
@@ -19,8 +21,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/tools/pager"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/engine"
-	"sigs.k8s.io/cli-utils/pkg/object"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

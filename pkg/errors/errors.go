@@ -12,9 +12,9 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/manifestreader"
 	cmdutil "k8s.io/kubectl/pkg/cmd/util"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/manifestreader"
 )
 
 const (

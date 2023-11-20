@@ -6,15 +6,15 @@ package task
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/cache"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/apply/taskrunner"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/apply/cache"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/apply/taskrunner"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 func TestDeleteInvTask(t *testing.T) {

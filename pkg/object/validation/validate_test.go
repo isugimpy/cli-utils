@@ -6,6 +6,10 @@ package validation_test
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/multierror"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/api/meta"
@@ -13,10 +17,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	cmdtesting "k8s.io/kubectl/pkg/cmd/testing"
-	"sigs.k8s.io/cli-utils/pkg/multierror"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 func TestValidate(t *testing.T) {

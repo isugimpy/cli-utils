@@ -6,9 +6,9 @@ package inventory
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"github.com/google/go-cmp/cmp"
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 func TestBuildObjMap(t *testing.T) {

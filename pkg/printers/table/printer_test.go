@@ -7,11 +7,11 @@ import (
 	"bytes"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/print/table"
+	"github.com/fluxcd/cli-utils/pkg/printers/printer"
+	printertesting "github.com/fluxcd/cli-utils/pkg/printers/testutil"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/print/table"
-	"sigs.k8s.io/cli-utils/pkg/printers/printer"
-	printertesting "sigs.k8s.io/cli-utils/pkg/printers/testutil"
 )
 
 func TestActionColumnDef(t *testing.T) {

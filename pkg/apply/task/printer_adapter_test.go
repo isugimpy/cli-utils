@@ -8,9 +8,9 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
 )
 
 func TestKubectlPrinterAdapter(t *testing.T) {

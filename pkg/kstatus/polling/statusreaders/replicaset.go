@@ -6,12 +6,12 @@ package statusreaders
 import (
 	"context"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/engine"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/engine"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
 )
 
 func NewReplicaSetStatusReader(mapper meta.RESTMapper, podStatusReader resourceTypeStatusReader) engine.StatusReader {

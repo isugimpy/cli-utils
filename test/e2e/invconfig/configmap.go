@@ -6,12 +6,12 @@ package invconfig
 import (
 	"context"
 
+	"github.com/fluxcd/cli-utils/pkg/apply"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
 	"github.com/onsi/gomega"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/cli-utils/pkg/apply"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

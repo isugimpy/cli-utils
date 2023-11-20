@@ -6,7 +6,7 @@ package stats
 import (
 	"fmt"
 
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
 )
 
 // Stats captures the summarized numbers from apply/prune/delete and

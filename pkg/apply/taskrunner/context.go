@@ -4,12 +4,12 @@
 package taskrunner
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/apply/cache"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/graph"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/apply/cache"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/graph"
 )
 
 // NewTaskContext returns a new TaskContext

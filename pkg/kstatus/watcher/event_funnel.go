@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
 )
 
 // eventFunnel wraps a list of event channels and multiplexes them down to a

@@ -10,7 +10,7 @@ export PATH := $(MYGOBIN):$(PATH)
 all: generate license fix vet fmt test lint tidy
 
 "$(MYGOBIN)/stringer":
-	go install golang.org/x/tools/cmd/stringer@v0.1.10
+	go install golang.org/x/tools/cmd/stringer@v0.12.0
 
 "$(MYGOBIN)/addlicense":
 	go install github.com/google/addlicense@v1.0.0
@@ -112,12 +112,12 @@ vet:
 
 .PHONY: build
 build:
-	go build -o bin/kapply sigs.k8s.io/cli-utils/cmd;
+	go build -o bin/kapply github.com/fluxcd/cli-utils/cmd;
 	mv bin/kapply "$(MYGOBIN)"
 
 .PHONY: build-with-race-detector
 build-with-race-detector:
-	go build -race -o bin/kapply sigs.k8s.io/cli-utils/cmd;
+	go build -race -o bin/kapply github.com/fluxcd/cli-utils/cmd;
 	mv bin/kapply "$(MYGOBIN)"
 
 .PHONY: verify-kapply-e2e

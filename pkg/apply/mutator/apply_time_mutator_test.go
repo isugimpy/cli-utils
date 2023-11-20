@@ -7,6 +7,9 @@ import (
 	"context"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/cache"
+	ktestutil "github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta/testrestmapper"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -15,9 +18,6 @@ import (
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/dynamic/fake"
 	"k8s.io/kubectl/pkg/scheme"
-	"sigs.k8s.io/cli-utils/pkg/apply/cache"
-	ktestutil "sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
-	"sigs.k8s.io/cli-utils/pkg/object"
 
 	// Using gopkg.in/yaml.v3 instead of sigs.k8s.io/yaml on purpose.
 	// yaml.v3 correctly parses ints:

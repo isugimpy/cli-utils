@@ -7,19 +7,19 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/multierror"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/dependson"
+	"github.com/fluxcd/cli-utils/pkg/object/mutation"
+	mutationutil "github.com/fluxcd/cli-utils/pkg/object/mutation/testutil"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/multierror"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/dependson"
-	"sigs.k8s.io/cli-utils/pkg/object/mutation"
-	mutationutil "sigs.k8s.io/cli-utils/pkg/object/mutation/testutil"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 var (

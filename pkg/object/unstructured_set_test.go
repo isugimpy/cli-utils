@@ -6,7 +6,7 @@ package object
 import (
 	"testing"
 
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
 )
 
 var resources = map[string]string{

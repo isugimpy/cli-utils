@@ -6,8 +6,8 @@ package validation
 import (
 	"errors"
 
-	"sigs.k8s.io/cli-utils/pkg/multierror"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/multierror"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // Collector simplifies collecting validation errors from multiple sources and

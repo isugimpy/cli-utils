@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 const (

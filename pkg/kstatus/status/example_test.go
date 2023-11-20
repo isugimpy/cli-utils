@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
 	"sigs.k8s.io/yaml"
 )
 

@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"github.com/stretchr/testify/assert"
 	appsv1 "k8s.io/api/apps/v1"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 func TestCollectorStopsWhenEventChannelIsClosed(t *testing.T) {

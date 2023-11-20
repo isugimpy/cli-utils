@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 func NewError(cause error, ids ...object.ObjMetadata) *Error {

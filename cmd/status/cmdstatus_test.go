@@ -11,18 +11,18 @@ import (
 	"testing"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/poller"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling"
+	pollevent "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/manifestreader"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	cmdtesting "k8s.io/kubectl/pkg/cmd/testing"
 	cmdutil "k8s.io/kubectl/pkg/cmd/util"
-	"sigs.k8s.io/cli-utils/pkg/apply/poller"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling"
-	pollevent "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/manifestreader"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 var (

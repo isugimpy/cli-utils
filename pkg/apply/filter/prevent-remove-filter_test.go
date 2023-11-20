@@ -6,9 +6,9 @@ package filter
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 var defaultObj = &unstructured.Unstructured{

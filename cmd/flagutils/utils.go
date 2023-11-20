@@ -6,8 +6,8 @@ package flagutils
 import (
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/inventory"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
 )
 
 const (

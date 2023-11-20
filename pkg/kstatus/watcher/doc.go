@@ -12,7 +12,7 @@
 // and pass in the list of object identifiers to the Watch function.
 //
 //	import (
-//	  "sigs.k8s.io/cli-utils/pkg/kstatus/watcher"
+//	  "github.com/fluxcd/cli-utils/pkg/kstatus/watcher"
 //	)
 //
 //	ids := []prune.ObjMetadata{

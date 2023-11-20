@@ -9,10 +9,10 @@ import (
 	"strings"
 	"unicode/utf8"
 
+	pe "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/print/common"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	pe "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/print/common"
 )
 
 // ColumnDefinition defines the columns that should be printed.

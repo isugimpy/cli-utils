@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/inventory"
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
 )
 
 func TestTextForError(t *testing.T) {

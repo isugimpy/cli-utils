@@ -8,15 +8,15 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/clusterreader"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/engine"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/statusreaders"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/clusterreader"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/engine"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/statusreaders"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // DefaultStatusWatcher reports on status updates to a set of objects.

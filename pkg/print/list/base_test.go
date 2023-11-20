@@ -6,11 +6,11 @@ package list
 import (
 	"testing"
 
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/print/stats"
-	"sigs.k8s.io/cli-utils/pkg/printers/printer"
-	printertesting "sigs.k8s.io/cli-utils/pkg/printers/testutil"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/print/stats"
+	"github.com/fluxcd/cli-utils/pkg/printers/printer"
+	printertesting "github.com/fluxcd/cli-utils/pkg/printers/testutil"
 )
 
 func TestPrint(t *testing.T) {

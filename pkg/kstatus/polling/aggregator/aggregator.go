@@ -4,8 +4,8 @@
 package aggregator
 
 import (
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
 )
 
 // AggregateStatus computes the aggregate status for all the resources.

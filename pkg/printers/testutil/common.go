@@ -8,14 +8,14 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	printcommon "github.com/fluxcd/cli-utils/pkg/print/common"
+	"github.com/fluxcd/cli-utils/pkg/print/stats"
+	"github.com/fluxcd/cli-utils/pkg/printers/printer"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	printcommon "sigs.k8s.io/cli-utils/pkg/print/common"
-	"sigs.k8s.io/cli-utils/pkg/print/stats"
-	"sigs.k8s.io/cli-utils/pkg/printers/printer"
 )
 
 type PrinterFactoryFunc func() printer.Printer

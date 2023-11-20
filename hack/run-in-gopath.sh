@@ -4,7 +4,7 @@
 
 set -o errexit -o nounset -o pipefail -o posix
 
-PKG_PATH="sigs.k8s.io/cli-utils"
+PKG_PATH="github.com/fluxcd/cli-utils"
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 

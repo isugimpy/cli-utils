@@ -4,11 +4,11 @@
 package validation
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/multierror"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/util/validation/field"
-	"sigs.k8s.io/cli-utils/pkg/multierror"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // Validator contains functionality for validating a set of resources prior

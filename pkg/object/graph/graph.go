@@ -9,9 +9,9 @@ package graph
 import (
 	"sort"
 
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
-	"sigs.k8s.io/cli-utils/pkg/ordering"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
+	"github.com/fluxcd/cli-utils/pkg/ordering"
 )
 
 // Graph is contains a directed set of edges, implemented as

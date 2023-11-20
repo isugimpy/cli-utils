@@ -6,8 +6,8 @@ package common
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
 )
 
 func TestSprintfWithColor(t *testing.T) {

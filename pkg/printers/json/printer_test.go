@@ -6,9 +6,9 @@ package json
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/printers/printer"
+	printertesting "github.com/fluxcd/cli-utils/pkg/printers/testutil"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/pkg/printers/printer"
-	printertesting "sigs.k8s.io/cli-utils/pkg/printers/testutil"
 )
 
 func TestPrint(t *testing.T) {

@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 func TestEventFactory(t *testing.T) {

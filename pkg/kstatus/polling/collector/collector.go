@@ -7,9 +7,9 @@ import (
 	"sort"
 	"sync"
 
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 func NewResourceStatusCollector(identifiers object.ObjMetadataSet) *ResourceStatusCollector {

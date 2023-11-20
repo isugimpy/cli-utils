@@ -6,8 +6,8 @@ package filter
 import (
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/common"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/common"
 )
 
 // PreventRemoveFilter implements ValidationFilter interface to determine

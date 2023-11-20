@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
+	"github.com/fluxcd/cli-utils/pkg/print/list"
+	"github.com/fluxcd/cli-utils/pkg/print/stats"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
-	"sigs.k8s.io/cli-utils/pkg/print/list"
-	"sigs.k8s.io/cli-utils/pkg/print/stats"
 )
 
 func NewFormatter(ioStreams genericclioptions.IOStreams,

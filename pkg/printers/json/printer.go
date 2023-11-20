@@ -4,10 +4,10 @@
 package json
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/print/list"
+	"github.com/fluxcd/cli-utils/pkg/printers/printer"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/print/list"
-	"sigs.k8s.io/cli-utils/pkg/printers/printer"
 )
 
 func NewPrinter(ioStreams genericclioptions.IOStreams) printer.Printer {

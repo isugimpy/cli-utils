@@ -6,10 +6,10 @@ package ordering
 import (
 	"sort"
 
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/cli-runtime/pkg/resource"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 type SortableInfos []*resource.Info

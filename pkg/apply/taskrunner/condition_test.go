@@ -6,13 +6,13 @@ package taskrunner
 import (
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/cache"
+	ktestutil "github.com/fluxcd/cli-utils/pkg/kstatus/polling/testutil"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/types"
-	"sigs.k8s.io/cli-utils/pkg/apply/cache"
-	ktestutil "sigs.k8s.io/cli-utils/pkg/kstatus/polling/testutil"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 var deployment1y = `

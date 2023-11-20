@@ -4,9 +4,9 @@
 package printer
 
 import (
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/collector"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/collector"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // PrintData records data required for printing

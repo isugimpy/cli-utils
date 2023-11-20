@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"regexp"
 
+	"github.com/fluxcd/cli-utils/pkg/object"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/api/meta/testrestmapper"
@@ -21,7 +22,6 @@ import (
 	"k8s.io/client-go/restmapper"
 	cmdtesting "k8s.io/kubectl/pkg/cmd/testing"
 	"k8s.io/kubectl/pkg/scheme"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 var (

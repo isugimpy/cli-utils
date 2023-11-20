@@ -8,14 +8,14 @@ import (
 	"sort"
 	"sync"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	pe "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object/validation"
+	"github.com/fluxcd/cli-utils/pkg/print/stats"
+	"github.com/fluxcd/cli-utils/pkg/print/table"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	pe "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/object/validation"
-	"sigs.k8s.io/cli-utils/pkg/print/stats"
-	"sigs.k8s.io/cli-utils/pkg/print/table"
 )
 
 const InvalidStatus status.Status = "Invalid"

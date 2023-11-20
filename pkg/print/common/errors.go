@@ -6,7 +6,7 @@ package common
 import (
 	"fmt"
 
-	"sigs.k8s.io/cli-utils/pkg/print/stats"
+	"github.com/fluxcd/cli-utils/pkg/print/stats"
 )
 
 // ResultErrorFromStats takes a stats object and returns either a ResultError or

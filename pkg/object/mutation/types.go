@@ -6,9 +6,9 @@ package mutation
 import (
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // ApplyTimeMutation is a list of substitutions to perform in the target

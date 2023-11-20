@@ -8,9 +8,9 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 const (

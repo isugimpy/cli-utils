@@ -4,13 +4,13 @@
 package printers
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/print/list"
+	"github.com/fluxcd/cli-utils/pkg/printers/events"
+	"github.com/fluxcd/cli-utils/pkg/printers/json"
+	"github.com/fluxcd/cli-utils/pkg/printers/printer"
+	"github.com/fluxcd/cli-utils/pkg/printers/table"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/print/list"
-	"sigs.k8s.io/cli-utils/pkg/printers/events"
-	"sigs.k8s.io/cli-utils/pkg/printers/json"
-	"sigs.k8s.io/cli-utils/pkg/printers/printer"
-	"sigs.k8s.io/cli-utils/pkg/printers/table"
 )
 
 const (

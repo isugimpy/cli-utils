@@ -6,10 +6,10 @@ package table
 import (
 	"strings"
 
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling/collector"
-	pe "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	"sigs.k8s.io/cli-utils/pkg/print/table"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling/collector"
+	pe "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/print/table"
 )
 
 // CollectorAdapter wraps the ResourceStatusCollector and

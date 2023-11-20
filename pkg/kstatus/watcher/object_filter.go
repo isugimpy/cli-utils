@@ -4,8 +4,8 @@
 package watcher
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // ObjectFilter allows for filtering objects.

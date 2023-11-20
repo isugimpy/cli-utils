@@ -4,11 +4,11 @@
 package list
 
 import (
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/object"
-	printcommon "sigs.k8s.io/cli-utils/pkg/print/common"
-	"sigs.k8s.io/cli-utils/pkg/print/stats"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/object"
+	printcommon "github.com/fluxcd/cli-utils/pkg/print/common"
+	"github.com/fluxcd/cli-utils/pkg/print/stats"
 )
 
 type Formatter interface {

@@ -6,7 +6,7 @@ package common
 import (
 	"fmt"
 
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
 )
 
 // color is a type that captures the ANSI code for colors on the

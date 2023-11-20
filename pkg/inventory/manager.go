@@ -6,10 +6,10 @@ package inventory
 import (
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // Manager wraps an Inventory with convenience methods that use ObjMetadata.

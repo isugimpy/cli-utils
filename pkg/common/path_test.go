@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/fluxcd/cli-utils/pkg/testutil"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/pkg/testutil"
 )
 
 const (

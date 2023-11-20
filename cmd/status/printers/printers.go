@@ -4,11 +4,11 @@
 package printers
 
 import (
+	"github.com/fluxcd/cli-utils/cmd/status/printers/event"
+	"github.com/fluxcd/cli-utils/cmd/status/printers/json"
+	"github.com/fluxcd/cli-utils/cmd/status/printers/printer"
+	"github.com/fluxcd/cli-utils/cmd/status/printers/table"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
-	"sigs.k8s.io/cli-utils/cmd/status/printers/event"
-	"sigs.k8s.io/cli-utils/cmd/status/printers/json"
-	"sigs.k8s.io/cli-utils/cmd/status/printers/printer"
-	"sigs.k8s.io/cli-utils/cmd/status/printers/table"
 )
 
 // CreatePrinter return an implementation of the Printer interface. The

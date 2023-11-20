@@ -4,16 +4,16 @@
 package apply
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/apply/info"
+	"github.com/fluxcd/cli-utils/pkg/apply/prune"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/watcher"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/cli-runtime/pkg/resource"
 	"k8s.io/client-go/discovery"
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/rest"
 	"k8s.io/kubectl/pkg/cmd/util"
-	"sigs.k8s.io/cli-utils/pkg/apply/info"
-	"sigs.k8s.io/cli-utils/pkg/apply/prune"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/watcher"
 )
 
 type DestroyerBuilder struct {

@@ -4,11 +4,11 @@
 package initcmd
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/config"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	cmdutil "k8s.io/kubectl/pkg/cmd/util"
 	"k8s.io/kubectl/pkg/util/i18n"
-	"sigs.k8s.io/cli-utils/pkg/config"
 )
 
 // InitRunner encapsulates the structures for the init command.

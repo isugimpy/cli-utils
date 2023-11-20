@@ -8,6 +8,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/fluxcd/cli-utils/test/e2e/e2eutil"
+	"github.com/fluxcd/cli-utils/test/e2e/invconfig"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/format"
@@ -16,8 +18,6 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/klog/v2"
 	"k8s.io/kubectl/pkg/scheme"
-	"sigs.k8s.io/cli-utils/test/e2e/e2eutil"
-	"sigs.k8s.io/cli-utils/test/e2e/invconfig"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"

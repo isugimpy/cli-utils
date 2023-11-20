@@ -6,9 +6,9 @@ package cache
 import (
 	"sync"
 
+	"github.com/fluxcd/cli-utils/pkg/kstatus/status"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/status"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // ResourceCacheMap stores ResourceStatus objects in a map indexed by resource ID.

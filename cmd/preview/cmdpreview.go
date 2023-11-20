@@ -9,17 +9,17 @@ import (
 	"strings"
 	"time"
 
+	"github.com/fluxcd/cli-utils/cmd/flagutils"
+	"github.com/fluxcd/cli-utils/pkg/apply"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/manifestreader"
+	"github.com/fluxcd/cli-utils/pkg/printers"
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	cmdutil "k8s.io/kubectl/pkg/cmd/util"
 	"k8s.io/kubectl/pkg/util/i18n"
-	"sigs.k8s.io/cli-utils/cmd/flagutils"
-	"sigs.k8s.io/cli-utils/pkg/apply"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/pkg/manifestreader"
-	"sigs.k8s.io/cli-utils/pkg/printers"
 )
 
 var (

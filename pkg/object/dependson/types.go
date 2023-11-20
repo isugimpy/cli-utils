@@ -5,7 +5,7 @@
 package dependson
 
 import (
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // DependencySet is a set of object references.

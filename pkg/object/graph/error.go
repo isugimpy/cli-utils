@@ -7,8 +7,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"sigs.k8s.io/cli-utils/pkg/multierror"
-	"sigs.k8s.io/cli-utils/pkg/object/mutation"
+	"github.com/fluxcd/cli-utils/pkg/multierror"
+	"github.com/fluxcd/cli-utils/pkg/object/mutation"
 )
 
 // ExternalDependencyError represents an invalid graph edge caused by an

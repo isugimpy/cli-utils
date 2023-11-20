@@ -7,6 +7,11 @@ import (
 	"context"
 	"strings"
 
+	"github.com/fluxcd/cli-utils/pkg/apply"
+	"github.com/fluxcd/cli-utils/pkg/common"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/test/e2e/customprovider"
+	"github.com/fluxcd/cli-utils/test/e2e/e2eutil"
 	"github.com/onsi/gomega"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -14,11 +19,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/cli-utils/pkg/apply"
-	"sigs.k8s.io/cli-utils/pkg/common"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/test/e2e/customprovider"
-	"sigs.k8s.io/cli-utils/test/e2e/e2eutil"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

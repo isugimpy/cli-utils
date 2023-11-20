@@ -6,9 +6,9 @@ package poller
 import (
 	"context"
 
-	"sigs.k8s.io/cli-utils/pkg/kstatus/polling"
-	pollevent "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/object"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/polling"
+	pollevent "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/object"
 )
 
 // Poller defines the interface the applier needs to poll for status of resources.

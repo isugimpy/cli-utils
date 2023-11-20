@@ -7,14 +7,14 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/apply"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/test/e2e/e2eutil"
 	"github.com/onsi/gomega"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/client-go/rest"
 	"k8s.io/kubectl/pkg/cmd/util"
-	"sigs.k8s.io/cli-utils/pkg/apply"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
-	"sigs.k8s.io/cli-utils/test/e2e/e2eutil"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

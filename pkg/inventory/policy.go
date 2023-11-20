@@ -6,8 +6,8 @@ package inventory
 import (
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/apis/actuation"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/apis/actuation"
 )
 
 // Policy defines if an inventory object can take over

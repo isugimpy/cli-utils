@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	"sigs.k8s.io/cli-utils/pkg/inventory"
+	"github.com/fluxcd/cli-utils/pkg/inventory"
 )
 
 func TestConvertInventoryPolicy(t *testing.T) {

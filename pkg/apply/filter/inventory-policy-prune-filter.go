@@ -4,8 +4,8 @@
 package filter
 
 import (
+	"github.com/fluxcd/cli-utils/pkg/inventory"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"sigs.k8s.io/cli-utils/pkg/inventory"
 )
 
 // InventoryPolicyPruneFilter implements ValidationFilter interface to determine

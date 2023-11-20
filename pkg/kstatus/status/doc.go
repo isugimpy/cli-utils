@@ -16,7 +16,7 @@
 // Compute function in the status package.
 //
 //	import (
-//	  "sigs.k8s.io/cli-utils/pkg/kstatus/status"
+//	  "github.com/fluxcd/cli-utils/pkg/kstatus/status"
 //	)
 //
 //	res, err := status.Compute(resource)
@@ -36,7 +36,7 @@
 // available in the resources.
 //
 //	import (
-//	  "sigs.k8s.io/cli-utils/pkg/kstatus/status
+//	  "github.com/fluxcd/cli-utils/pkg/kstatus/status
 //	)
 //
 //	err := status.Augment(resource)

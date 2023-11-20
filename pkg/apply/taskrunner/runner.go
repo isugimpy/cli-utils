@@ -7,12 +7,12 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/fluxcd/cli-utils/pkg/apply/cache"
+	"github.com/fluxcd/cli-utils/pkg/apply/event"
+	pollevent "github.com/fluxcd/cli-utils/pkg/kstatus/polling/event"
+	"github.com/fluxcd/cli-utils/pkg/kstatus/watcher"
+	"github.com/fluxcd/cli-utils/pkg/object"
 	"k8s.io/klog/v2"
-	"sigs.k8s.io/cli-utils/pkg/apply/cache"
-	"sigs.k8s.io/cli-utils/pkg/apply/event"
-	pollevent "sigs.k8s.io/cli-utils/pkg/kstatus/polling/event"
-	"sigs.k8s.io/cli-utils/pkg/kstatus/watcher"
-	"sigs.k8s.io/cli-utils/pkg/object"
 )
 
 // NewTaskStatusRunner returns a new TaskStatusRunner.
