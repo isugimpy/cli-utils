@@ -117,6 +117,12 @@ func Compute(u *unstructured.Unstructured) (*Result, error) {
 		return fn(u)
 	}
 
+	// Check 3rd party resources
+	fn = GetThirdPartyConditionsFn(u)
+	if fn != nil {
+		return fn(u)
+	}
+
 	// If neither the generic properties of the resource-specific rules
 	// can determine status, we do one last check to see if the resource
 	// does expose a Ready condition. Ready conditions do not adhere
