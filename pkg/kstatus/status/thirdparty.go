@@ -62,7 +62,19 @@ func rolloutConditions(u *unstructured.Unstructured) (*Result, error) {
 	}
 
 	if progressing {
-		return newInProgressStatus(progressingReason, progressingMessage), nil
+		if !completed {
+			return newInProgressStatus(progressingReason, progressingMessage), nil
+		} else {
+			if healthy {
+				return &Result{
+					Status:     CurrentStatus,
+					Message:    "Rollout completed",
+					Conditions: []Condition{},
+				}, nil
+			} else {
+				return newFailedStatus(progressingReason, progressingMessage), nil
+			}
+		}
 	} else {
 		if completed && healthy {
 			return &Result{
