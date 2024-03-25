@@ -151,3 +151,109 @@ status:
 	_, err := status.Compute(deployment)
 	assert.Error(t, err)
 }
+
+func TestRollout(t *testing.T) {
+	deploymentManifest := `
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+   name: test
+   generation: 1
+   namespace: qual
+status:
+   observedGeneration: "1"
+   updatedReplicas: 1
+   readyReplicas: 1
+   availableReplicas: 1
+   replicas: 1
+   conditions:
+    - lastTransitionTime: "2024-02-27T18:13:58Z"
+      lastUpdateTime: "2024-02-27T18:13:58Z"
+      message: Rollout is paused
+      reason: RolloutPaused
+      status: "False"
+      type: Paused
+    - lastTransitionTime: "2024-02-27T18:16:04Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: Rollout is not healthy
+      reason: RolloutHealthy
+      status: "False"
+      type: Healthy
+    - lastTransitionTime: "2024-02-27T18:16:04Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: RolloutCompleted
+      reason: RolloutCompleted
+      status: "False"
+      type: Completed
+    - lastTransitionTime: "2024-02-27T18:16:04Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: Rollout does not have minimum availability
+      reason: AvailableReason
+      status: "False"
+      type: Available
+    - lastTransitionTime: "2024-02-27T18:13:58Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: ReplicaSet "rollouts-demo-5687b955b8" is progressing.
+      reason: ReplicaSetUpdated
+      status: "True"
+      type: Progressing
+`
+	deployment := testutil.YamlToUnstructured(t, deploymentManifest)
+
+	res, err := status.Compute(deployment)
+	assert.NoError(t, err)
+
+	assert.Equal(t, status.Status("InProgress"), res.Status)
+}
+func TestRolloutFailed(t *testing.T) {
+	deploymentManifest := `
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+   name: test
+   generation: 1
+   namespace: qual
+status:
+   observedGeneration: "1"
+   updatedReplicas: 1
+   readyReplicas: 1
+   availableReplicas: 1
+   replicas: 1
+   conditions:
+    - lastTransitionTime: "2024-02-27T18:13:58Z"
+      lastUpdateTime: "2024-02-27T18:13:58Z"
+      message: Rollout is paused
+      reason: RolloutPaused
+      status: "False"
+      type: Paused
+    - lastTransitionTime: "2024-02-27T18:16:04Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: Rollout is not healthy
+      reason: RolloutHealthy
+      status: "False"
+      type: Healthy
+    - lastTransitionTime: "2024-02-27T18:16:04Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: RolloutCompleted
+      reason: RolloutCompleted
+      status: "False"
+      type: Completed
+    - lastTransitionTime: "2024-02-27T18:16:04Z"
+      lastUpdateTime: "2024-02-27T18:16:04Z"
+      message: Rollout does not have minimum availability
+      reason: AvailableReason
+      status: "False"
+      type: Available
+    - lastTransitionTime: "2024-02-27T18:34:29Z"
+      lastUpdateTime: "2024-02-27T18:34:29Z"
+      message: ReplicaSet "rollouts-demo-5687b955b8" has timed out progressing.
+      reason: ProgressDeadlineExceeded
+      status: "False"
+      type: Progressing`
+	deployment := testutil.YamlToUnstructured(t, deploymentManifest)
+
+	res, err := status.Compute(deployment)
+	assert.NoError(t, err)
+
+	assert.Equal(t, status.Status("Failed"), res.Status)
+}
